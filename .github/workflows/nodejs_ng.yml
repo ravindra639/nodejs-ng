@@ -29,4 +29,4 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: ng build
-    - run: npm test
+    #- run: npm test
