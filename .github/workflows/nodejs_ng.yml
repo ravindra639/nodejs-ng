@@ -12,7 +12,7 @@ on:
 jobs:
   build:
 
-    runs-on: node-ng
+    runs-on: msbuild
     steps:
     - uses: actions/checkout@v3
     - run: npm install
