@@ -12,10 +12,11 @@ jobs:
     env:
       Greeting: Hello
     steps:
-      - name: "Say Hello Mona it's Monday"
+      - name: "ONE"
         run: |
           echo "Welcome to 1st echo"
           echo "Welcome to the 2nd echo"
+      - name: "TWO"
         run: |
           echo "Welcome to the 2nd Run 1st echo"
           echo "Welcome to the 2nd Run 2nd echo"
