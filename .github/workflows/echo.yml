@@ -16,7 +16,7 @@ jobs:
         run: |
           echo "Welcome to 1st echo"
           echo "Repo Name: ${{ github.repository }}"
-          echo "WORKSPACE: ${{ env.GITHUB_WORKSPACE }}"
+          echo "WORKSPACE: ${{ github.workspace }}"
           
       - name: "TWO"
         run: |
