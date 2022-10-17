@@ -14,8 +14,8 @@ jobs:
     steps:
       - name: "ONE"
         run: |
+          working-directory: ${{env.GITHUB_WORKSPACE}}
           echo "Welcome to 1st echo"
-          echo "Welcome to the 2nd echo"
           echo "Repo Name: ${{ github.repository }}"
           echo "WORKSPACE: ${{env.GITHUB_WORKSPACE}}"
           
