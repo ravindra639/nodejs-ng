@@ -17,9 +17,11 @@ jobs:
           echo "Welcome to 1st echo"
           echo "Repo Name: ${{ github.repository }}"
           echo "WORKSPACE: ${{ github.workspace }}"
-          echo " Waint for 10 sec"
-          run: Start-Sleep -s 10
-          shell: powershell
+          
+      - name: Sleep for 10s
+        uses: juliangruber/sleep-action@v1
+        with:
+          time: 10s
           
       - name: "TWO"
         run: |
