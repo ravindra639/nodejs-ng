@@ -16,6 +16,7 @@ jobs:
         run: |
           echo "Welcome to 1st echo"
           echo "Welcome to the 2nd echo"
+          echo "$(Build.Repository.Name)"
       - name: "TWO"
         run: |
           echo "Welcome to the 2nd Run 1st echo"
