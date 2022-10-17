@@ -8,7 +8,7 @@ env:
 
 jobs:
   greeting_job:
-    runs-on: ubuntu-latest
+    runs-on: node-ng
     env:
       Greeting: Hello
     steps:
@@ -17,6 +17,7 @@ jobs:
           echo "Welcome to 1st echo"
           echo "Welcome to the 2nd echo"
           echo "Repo Name: ${{ github.repository }}"
+          echo "WORKSPACE: ${{GITHUB_WORKSPACE}}"
           
       - name: "TWO"
         run: |
