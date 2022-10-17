@@ -17,6 +17,8 @@ jobs:
           echo "Welcome to 1st echo"
           echo "Repo Name: ${{ github.repository }}"
           echo "WORKSPACE: ${{ github.workspace }}"
+          echo " Waint for 10 sec"
+          timeout /t 10
           
       - name: "TWO"
         run: |
