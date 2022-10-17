@@ -18,7 +18,8 @@ jobs:
           echo "Repo Name: ${{ github.repository }}"
           echo "WORKSPACE: ${{ github.workspace }}"
           echo " Waint for 10 sec"
-          timeout /t 10
+          run: Start-Sleep -s 10
+          shell: powershell
           
       - name: "TWO"
         run: |
