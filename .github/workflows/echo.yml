@@ -17,7 +17,7 @@ jobs:
           echo "Welcome to 1st echo"
           echo "Repo Name: ${{ github.repository }}"
           echo "WORKSPACE: ${{ github.workspace }}"
-          echo "DAY_OF_WEEK: $DAY_OF_WEEK"
+          echo "DAY_OF_WEEK: ${{ DAY_OF_WEEK }}"
           
       - name: Sleep for 10s
         uses: juliangruber/sleep-action@v1
