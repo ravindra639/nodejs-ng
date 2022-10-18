@@ -1,0 +1,27 @@
+on: push
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    if:
+      contains('
+        refs/heads/develop
+        refs/heads/test
+      ', github.ref)
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run tests
+      run: echo "Job1 Execution"
+
+  deployment:
+    name: Deployment
+    runs-on: ubuntu-latest
+    #needs: [test]
+    if:
+      contains('
+        refs/heads/main
+      ', github.ref)
+    steps:
+    - uses: actions/checkout@v2
+    - name: Deploy
+      run: echo "Job2 Execution"
