@@ -7,7 +7,7 @@ env:
   DAY_OF_WEEK: Monday
 
 jobs:
-  greeting_job:
+  Job1_Runner1:
     runs-on: node-ng
     env:
       Greeting: Hello
@@ -28,4 +28,26 @@ jobs:
         run: |
           echo "Welcome to the 2nd Run 1st echo"
           echo "Welcome to the 2nd Run 2nd echo"
+  Job2_Runner2:
+    runs-on: node-ng1
+    env:
+      Greeting: Hello
+    steps:
+      - name: "ONE"
+        run: |
+          echo "Welcome to 1st echo"
+          echo "Repo Name: ${{ github.repository }}"
+          echo "WORKSPACE: ${{ github.workspace }}"
+          echo "DAY_OF_WEEK: ${{ env.DAY_OF_WEEK }}"
+          
+      - name: Sleep for 10s
+        uses: juliangruber/sleep-action@v1
+        with:
+          time: 10s
+          
+      - name: "TWO"
+        run: |
+          echo "Welcome to the 2nd Run 1st echo"
+          echo "Welcome to the 2nd Run 2nd echo"
+          
           
